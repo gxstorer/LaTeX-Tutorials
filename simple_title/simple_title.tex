@@ -1,0 +1,16 @@
+\documentclass{article}% [Determines font size] { }Determines type of document (article/beamer/book/etc.)
+
+    \title{% Custom environment that will place Title-sized text on the first page of document, with center-adjusted text.
+Simple Title Demonstration
+    \thanks{% Special type of footnote that uses symbols rather than numbers in a title page. Can use multiple times to separate different footnotes.
+Institution A, Institution B, Research Grant A, Research Assistant A, Research Assistant B, External Contact A.} }
+
+    \author{Author A\thanks{Author A's info}} % Using the "\and" command adds additional space between coauthors. 
+
+    \date{August 2024}% Used to specify the date of the draft. If omitted, then the current date will be printed. If left blank: "\date{ }" then no date will be printed. 
+
+\begin{document}% Required to produce a compiled LaTeX document. 
+
+    \maketitle% Used to print contents of the title page. Use \abstract after \maketitle to include abstract in the title page. If not, then use \newpage to keep title page containing only the title, authors, date, and acknowledgments.
+
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass{article}% [Determines font size] { }Determines type of document (article/beamer/book/etc.)
+
+\usepackage{appendix}
+\usepackage{blindtext}
+
+\begin{document}% Required to produce a compiled LaTeX document. 
+
+    \tableofcontents 
+
+     \newpage
+\addcontentsline{toc}{section}{\Large Part 1}% Use addcontentsline command to manually insert a line in the table of contents. This one also demonstrates that you can change the font size as well.
+
+\section{Introduction}
+    \blindtext
+\section{Research Design}
+    \blindtext
+
+\addcontentsline{toc}{section}{\huge Part 2}
+\section{Methodology}
+    \blindtext
+\section{Results}
+    \blindtext
+\section{Conclusion}
+    \blindtext
+
+\appendix
+\appendixpage
+\addcontentsline{toc}{section}{\underline{Appendix}}
+\section{Appendix A1}
+    \blindtext
+\end{document}

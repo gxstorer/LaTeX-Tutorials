@@ -1,0 +1,19 @@
+\documentclass{article}% [Determines font size] { }Determines type of document (article/beamer/book/etc.)
+
+\usepackage{setspace}% Sets line spacing for body & bibliography of document. Use \setstretch{} to specify line spacing.
+        \setstretch{2}% Customized spacing from {setspace} package.
+
+\usepackage{blindtext}
+
+\begin{document}% Required to produce a compiled LaTeX document. 
+
+    \textbf{The setspace package is used to set line spacing. The value of using this package over the "baselinestretch" command is that setspace only affect the body and bibliography instead of the whole document. To demonstrate, this document will now feature a footnote that is single-spaced, while the rest of the document is double-spaced.\footnote{\blindtext}}
+
+    \blindtext
+\newpage
+    \renewcommand{\baselinestretch}{1.5}
+This is a demonstration of using hte baselinestretch method.\footnote{\blindtext} \\
+
+    \blindtext
+
+\end{document}

@@ -1,0 +1,14 @@
+\documentclass{article}% [Determines font size] { }Determines type of document (article/beamer/book/etc.)
+
+\usepackage{blindtext}
+
+\begin{document}% Required to produce a compiled LaTeX document. 
+    \renewcommand{\contentsname}{\centering Table of Contents}% Used to both center the title and to rename the title from "Contents"
+    
+    \tableofcontents 
+
+     \newpage
+     \blinddocument
+
+\end{document}
+

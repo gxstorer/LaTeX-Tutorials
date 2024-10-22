@@ -1,0 +1,19 @@
+\documentclass{article}% [Determines font size] { }Determines type of document (article/beamer/book/etc.)
+
+\usepackage{setspace}% Sets line spacing for body & bibliography of document. Use \setstretch{} to specify line spacing.
+    \setstretch{1.5}% Customized spacing from {setspace} package.
+
+\usepackage{blindtext}
+
+\begin{document}% Required to produce a compiled LaTeX document. 
+
+    \textbf{This is a demonstration of using different spacing in different parts of a document. The first paragraph is 1.5 margins.} \\
+
+    \blindtext \\
+
+    \setstretch{1}
+    \textbf{This paragraph is now using single spacing:}\\
+
+    \blindtext
+
+\end{document}

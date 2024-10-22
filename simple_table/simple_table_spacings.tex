@@ -1,0 +1,53 @@
+\documentclass{article}
+
+
+\usepackage{array}
+\setlength\extrarowheight{+9pt}  % When used in the preamble, it will set the new default spacing for tables moving forward. Apply to specific table environments to make exceptions to this new rule. 
+
+\begin{document}
+
+    \begin{table}[htbp]\centering
+           \caption{Spacing determined by preamble command.}
+        \begin{tabular}{l*{1}{cc}}
+            \hline
+            &        Mean&          SD\\
+            \hline
+            Domestic    &      6072.4&      3097.1\\
+
+            Foreign     &      6384.7&      2621.9\\
+            \hline
+
+        \end{tabular}
+    \end{table}
+
+    \begin{table}[htbp]\centering
+          \caption{Second Spacing determined by preamble command.}
+        \begin{tabular}{l*{1}{cc}}
+            \hline
+            &        Mean&          SD\\
+            \hline
+            Domestic    &      6072.4&      3097.1\\
+
+            Foreign     &      6384.7&      2621.9\\
+            \hline
+
+        \end{tabular}
+    \end{table}
+
+    \begin{table}[htbp]\centering
+            \setlength\extrarowheight{-5pt}
+             \caption{Spacing exception for this the specific table.}
+        \begin{tabular}{l*{1}{cc}}
+            \hline
+            &        Mean&          SD\\
+            \hline
+            Domestic    &      6072.4&      3097.1\\
+
+            Foreign     &      6384.7&      2621.9\\
+            \hline
+
+        \end{tabular}
+    \end{table}
+
+
+\end{document}

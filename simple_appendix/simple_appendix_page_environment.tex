@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\title{Main Title\thanks{\blindtext}}
+\author{Author Name}
+\date{\today}
+
+\usepackage[text={7in,9in}]{geometry}
+\usepackage{blindtext}
+
+\begin{document}
+
+% First Title Page
+\maketitle
+\begin{abstract}
+\blindtext
+\end{abstract}
+
+\newpage
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+% Second Title Page
+\newgeometry{top=0.5in}
+\begin{titlepage}
+    \centering
+    {\LARGE \textbf{Online Appendix}}\\ [4em]
+    {\LARGE \title{Main Title}\footnote[2]{\blindtext}}\\ [1.5em]
+    {\large Author Name}\\ [1em]
+    {\large \date{\today}}\\ [4em]
+
+\begin{abstract}
+    \blindtext
+\end{abstract}
+
+\vfill
+
+\end{titlepage}
+
+
+\end{document}

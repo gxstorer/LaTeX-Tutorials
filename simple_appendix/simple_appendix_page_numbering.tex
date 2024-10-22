@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\title{Main Title\thanks{\blindtext}}
+\author{Author Name}
+\date{\today}
+
+\usepackage{blindtext}
+
+\begin{document}
+
+% First Title Page
+\maketitle
+\begin{abstract}
+\blindtext
+\end{abstract}
+
+\newpage
+
+\renewcommand
+        {\thepage}
+        {A.\arabic{page}}
+        
+\renewcommand*
+    {\thefootnote} 
+    {\fnsymbol{footnote}}%                              Footnote style
+
+% Second Title Page
+\begin{titlepage}
+    \thispagestyle{plain} % Ensure page number is shown
+    \centering
+    {\LARGE \textbf{Online Appendix}}\\ [1.5em]
+    {\LARGE \title{Main Title}\footnote[2]{\blindtext}}\\ [1.5em]
+    {\large Author Name}\\ [1em]
+    {\large \date{\today}}\\ [4em]
+
+    \begin{abstract}
+        \blindtext
+    \end{abstract}
+\end{titlepage}
+
+\newpage
+\setcounter{page}{2}% 		Based on the manual formatting of the appendix title page, the numbering order is being controlled by just that page, and so a manual reset of the page counter moves the second appendix page to be listed as "B".
+\blindtext[5]
+
+\end{document}

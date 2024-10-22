@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\title{Main Title\thanks{\blindtext}}
+\author{Author Name}
+\date{\today}
+
+\usepackage{blindtext}
+
+\begin{document}
+
+% First Title Page
+\maketitle
+\begin{abstract}
+\blindtext
+\end{abstract}
+
+\newpage
+\appendix
+
+\renewcommand
+        {\thepage}
+        {A.\arabic{page}}
+
+\renewcommand
+        {\thesection}
+        {A.\arabic{section}}
+
+\renewcommand*
+        {\thefootnote}
+        {\fnsymbol{footnote}} % Footnote style
+
+\setcounter{table}{0}
+\renewcommand
+        {\theequation}
+        {A.\arabic{equation}}
+
+% Second Title Page
+\begin{titlepage}
+    \thispagestyle{plain} % Ensure page number is shown
+    \centering
+    {\LARGE \textbf{Online Appendix}}\\ [1.5em]
+    {\LARGE \title{Main Title}\footnote[2]{\blindtext}}\\ [1.5em]
+    {\large Author Name}\\ [1em]
+    {\large \date{\today}}\\ [4em]
+    \tableofcontents
+\end{titlepage}
+
+\newpage
+\setcounter{page}{2}% 		Based on the manual formatting of the appendix title page, the numbering order is being controlled by just that page, and so a manual reset of the page counter moves the second appendix page to be listed as "B".
+\section{Proof of Proposition 1}
+\blindtext
+
+\subsection{Supplemental Model}
+
+    \begin{equation}% Equation environment allows for entering mathematical expressions without having to use the "$ $" notations.
+        \label{eq:simple_equation}% Use a ":" to create a category of labels on the left side, and the right side is the label of this specific equation.
+        Y_{ijt} = \alpha + \beta_kEligible_{ijt} + f (Age^T_{ijt}-k^T | 
+        Eligible_{ijt}) + \lambda'X_{ij} + \epsilon_{ijt}
+    \end{equation}
+
+\blindtext \textbf{See Equation (\ref{eq:simple_equation})}.
+
+\section{Proof of proposition 2}
+\blindtext[3]
+
+\section{Supplemental Data}
+\setcounter{equation}{0}%                       Place this counter reset after every new section to make the numerical order to be back at 1 for each appendix section.
+
+    \begin{equation}% Equation environment allows for entering mathematical expressions without having to use the "$ $" notations.
+        \label{eq:simple_equation_alt}% Use a ":" to create a category of labels on the left side, and the right side is the label of this specific equation.
+        Y_{ijt} = \alpha + \beta_kEligible_{ijt} + f (Age^T_{ijt}-k^T | 
+        Eligible_{ijt}) + \lambda'X_{ij} + \epsilon_{ijt}
+    \end{equation}
+
+\blindtext \textbf{See Equation (\ref{eq:simple_equation_alt})}.
+
+\end{document}

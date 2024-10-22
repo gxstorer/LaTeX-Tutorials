@@ -1,0 +1,29 @@
+\documentclass[a4paper]{article}
+
+\usepackage{appendix}
+\usepackage{minitoc}%           Package Required for customizing Table Of Contents
+\usepackage{blindtext}
+
+\begin{document}%               Required to produce a compiled LaTeX document. 
+%%%%%%%%%%  Table of Contents %%%%%%%%%%%%%%%%%%%%%
+\doparttoc%                Tell to minitoc to generate a toc for the parts
+\faketableofcontents    
+        \renewcommand 
+            \thepart{}%        Removes the "Part" title from the TOC.
+        \renewcommand 
+            \partname{}%       Removes the name of the part from the TOC.
+
+\part{}%               Creates a TOC for all sections from here to the next "part". Place right before Appendix                          to cut off all sections except for the appendix.
+\parttoc%                  Prints the appendix TOC into document.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\blinddocument
+\newpage
+
+\appendix
+\part{Appendix}%       Start the appendix part
+\parttoc%                  Prints the appendix TOC into document. 
+
+\blinddocument
+
+\end{document}

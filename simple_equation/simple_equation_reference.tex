@@ -1,0 +1,15 @@
+\documentclass{article}% [Determines font size] { }Determines type of document (article/beamer/book/etc.)
+
+\usepackage{blindtext}
+
+\begin{document}% Required to produce a compiled LaTeX document. 
+
+    \begin{equation}% Equation environment allows for entering mathematical expressions without having to use the "$ $" notations.
+        \label{eq:simple_equation}% Use a ":" to create a category of labels on the left side, and the right side is the label of this specific equation.
+        Y_{ijt} = \alpha + \beta_kEligible_{ijt} + f (Age^T_{ijt}-k^T | 
+        Eligible_{ijt}) + \lambda'X_{ij} + \epsilon_{ijt}
+    \end{equation}
+
+\blindtext \textbf{See Equation (\ref{eq:simple_equation})}.
+
+\end{document}

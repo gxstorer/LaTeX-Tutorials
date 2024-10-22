@@ -1,0 +1,28 @@
+\documentclass{article}% [Determines font size] { }Determines type of document (article/beamer/book/etc.)
+
+\usepackage[margin=1in]{geometry}% Determines spacing rules for document. [Options for page size & margins] 
+\usepackage{blindtext}
+
+\begin{document}% Required to produce a compiled LaTeX document. 
+
+        \textbf{This page uses 1 inch margins on all sides.}\\
+        \blindtext[7]
+\newpage
+
+        \newgeometry{margin=2.5in}
+
+        \textbf{This page is a demonstration of making geometry changes midway through the document.} \\
+        \blindtext[3]
+\newpage
+
+        \newgeometry{hmargin=3in,vmargin=0in}
+
+        \textbf{This is a demonstration of a very narrow margin with tall vertical margins.} \\
+        \blindtext[3]
+\newpage
+
+        \newgeometry{left=3in, right=0.5in, top=1in, bottom=1in}
+        \textbf{This is a demonstration of a lopsided document, and how you can control each side's margins.} \\ 
+        \blindtext[5]
+
+\end{document}
